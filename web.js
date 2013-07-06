@@ -2,6 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+app.use('/static', express.static(__dirname + '/static'));
+
 app.get('/', function(request, response) {
   response.send('Hello World 2!');
 });
